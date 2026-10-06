@@ -316,16 +316,37 @@ html {
 }
 
 /* --------------------------- BODY --------------------------- */
+:root {
+  --primary-color: #2e90e1;
+  --secondary-color: #45affd;
+  --tertiary-color: #76c1ff;
+  --font-color: #0f2f76;
+  --grey-color: #707070;
+
+  --brand-green: #05c71c;
+  --brand-blue: #0659be;
+  --brand-light: #f5f3f3;
+  --dark-text: #333;
+  --soft-gray: #f0f0f0;
+
+  --default-font: "Spline Sans", sans-serif;
+  --light-weight: 300;
+  --normal-weight: 500;
+  --leading: 150%;
+  --gutter: 10px;
+}
+
 body {
-  font-family: "Spline Sans", sans-serif;
-  font-weight: 300;
+  font-family: var(--default-font);
+  font-weight: var(--light-weight);
+  color: var(--font-color);
+  line-height: var(--leading);
   min-width: 320px;
   background-color: white;
 }
 
-/* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  border-bottom: 1px solid #f5f3f3;
+  border-bottom: 1px solid var(--brand-light);
 }
 
 header {
@@ -333,13 +354,15 @@ header {
   grid-template-columns: 50px auto 44px;
   column-gap: 10px;
   align-items: center;
-  padding: 0.5rem 10px;
+  padding: 0.5rem var(--gutter);
 }
+
 header span {
   font-size: 1.6rem;
-  font-weight: 300;
-  color: #05c71c;
+  font-weight: var(--light-weight);
+  color: var(--brand-green);
 }
+
 header img {
   width: 100%;
   height: auto;
@@ -348,15 +371,15 @@ header img {
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 /* --------------------------- MAIN --------------------------- */
 main h1 {
-  padding: 1rem 10px 0.5rem 10px;
+  padding: 1rem var(--gutter) 0.5rem var(--gutter);
   font-size: 1.5rem;
-  color: #0659be;
-  font-weight: 300;
+  color: var(--brand-blue);
+  font-weight: var(--light-weight);
 }
 main p {
-  padding: 0.5rem 10px;
-  color: #333;
-  line-height: 150%;
+  padding: 0.5rem var(--gutter);
+  color: var(--dark-text);
+  line-height: var(--leading);
 }
 
 div.reviews {
@@ -382,12 +405,12 @@ div.services {
 }
 div.services section {
   position: relative;
-  padding: 0.5drem;
+  padding: 0.5rem;
   display: grid;
   gap: 0.5rem;
 }
 div.services section h3 {
-  background-color: grey;
+  background-color: gray;
 }
 div.services section img {
   width: 100%;
@@ -395,10 +418,10 @@ div.services section img {
   display: block;
 }
 div.services section p {
-  color: rgb(0, 0, 0);
+  color: var(--dark-text);
   padding: 0;
   margin: 0;
-  background-color: rgb(173, 173, 173);
+  background-color: var(--soft-gray);
 }
 
 .swiper, .swiper img {
@@ -408,15 +431,15 @@ div.services section p {
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #05c71c;
+  background-color: var(--brand-green);
 }
 
 footer {
   font-size: 0.85rem;
-  padding: 1rem 10px;
+  padding: 1rem var(--gutter);
   color: #f5f3f3;
   text-align: center;
-  line-height: 150%;
+  line-height: var(--leading);
 }
 footer a {
   color: #f5f3f3;
