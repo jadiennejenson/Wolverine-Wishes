@@ -317,34 +317,22 @@ html {
 
 /* --------------------------- BODY --------------------------- */
 :root {
-  --primary-color: #2e90e1;
-  --secondary-color: #45affd;
-  --tertiary-color: #76c1ff;
-  --font-color: #0f2f76;
-  --grey-color: #707070;
-
+  --dark-text: #333;
+  --brand-light: #f5f3f3;
   --brand-green: #05c71c;
   --brand-blue: #0659be;
-  --brand-light: #f5f3f3;
-  --dark-text: #333;
   --soft-gray: #f0f0f0;
-
-  --default-font: "Spline Sans", sans-serif;
-  --light-weight: 300;
-  --normal-weight: 500;
-  --leading: 150%;
-  --gutter: 10px;
 }
 
 body {
-  font-family: var(--default-font);
-  font-weight: var(--light-weight);
-  color: var(--font-color);
-  line-height: var(--leading);
+  font-family: "Spline Sans", sans-serif;
+  font-weight: 300;
   min-width: 320px;
+  color: var(--dark-text);
   background-color: white;
 }
 
+/* --------------------------- HEADER --------------------------- */
 #headerWrapper {
   border-bottom: 1px solid var(--brand-light);
 }
@@ -354,15 +342,13 @@ header {
   grid-template-columns: 50px auto 44px;
   column-gap: 10px;
   align-items: center;
-  padding: 0.5rem var(--gutter);
+  padding: 0.5rem 10px;
 }
-
 header span {
   font-size: 1.6rem;
-  font-weight: var(--light-weight);
+  font-weight: 300;
   color: var(--brand-green);
 }
-
 header img {
   width: 100%;
   height: auto;
@@ -371,15 +357,15 @@ header img {
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 /* --------------------------- MAIN --------------------------- */
 main h1 {
-  padding: 1rem var(--gutter) 0.5rem var(--gutter);
+  padding: 1rem 10px 0.5rem 10px;
   font-size: 1.5rem;
   color: var(--brand-blue);
-  font-weight: var(--light-weight);
+  font-weight: 300;
 }
 main p {
-  padding: 0.5rem var(--gutter);
+  padding: 0.5rem 10px;
   color: var(--dark-text);
-  line-height: var(--leading);
+  line-height: 150%;
 }
 
 div.reviews {
@@ -405,7 +391,7 @@ div.services {
 }
 div.services section {
   position: relative;
-  padding: 0.5rem;
+  padding: 0.5drem;
   display: grid;
   gap: 0.5rem;
 }
@@ -436,10 +422,10 @@ div.services section p {
 
 footer {
   font-size: 0.85rem;
-  padding: 1rem var(--gutter);
+  padding: 1rem 10px;
   color: #f5f3f3;
   text-align: center;
-  line-height: var(--leading);
+  line-height: 150%;
 }
 footer a {
   color: #f5f3f3;
