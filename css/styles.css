@@ -383,6 +383,8 @@ div.services {
 div.services section {
   position: relative;
   padding: 0.5drem;
+  display: grid;
+  gap: 0.5rem;
 }
 div.services section h3 {
   background-color: grey;
@@ -391,10 +393,6 @@ div.services section img {
   width: 100%;
   height: auto;
   display: block;
-}
-div.services section img:last-child {
-  position: absolute;
-  bottom: 0;
 }
 div.services section p {
   color: rgb(0, 0, 0);
